@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="asstes/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/fontAwesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="asstes/fontawesome-free-5.9.0-web/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .mui-media-body {
+            font-size: 14px;
+        }
+        
+        .add {
+            display: block;
+            width: 100%;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">收货地址</h1>
+        <a href="search.html" class="mui-icon mui-icon-back mui-push-left mui-icon-left-nav"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person  mui-active"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <a href="addAderss.html?isEdit=0" class="add">添加收货地址</a>
+        <ul class="mui-table-view" id="aderssBox">
+
+
+        </ul>
+    </div>
+
+    <script src="asstes/mui/js/mui.min.js"></script>
+    <script src="asstes/zepto/zepto.min.js"></script>
+    <script src="asstes/artTemplate/template-native.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/aderss.js"></script>
+    <script type="text/template" id="aderssTpl">
+        <% for(var i=0; i < result.length; i++){ %>
+            <li class="mui-table-view-cell mui-media">
+                <div class="mui-slider-right mui-disabled">
+                    <span class="mui-btn mui-btn-blue edit" data-id="<%=result[i].id %>">编辑</span>
+                    <a href="javascript:;" class="mui-btn mui-btn-red delete" data-id="<%=result[i].id %>">删除</a>
+                </div>
+
+                <div class="mui-media-body mui-slider-handle">
+                    邮编：
+                    <%=result[i].podtCode %>
+                        收货人：
+                        <%=result[i].recipients %>
+                            <p class='mui-ellipsis'>
+                                <%=result[i].address %>
+                                    <%=result[i].addressDetail %>
+                            </p>
+                </div>
+
+            </li>
+            <% } %>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="asstes/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/fontAwesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="asstes/fontawesome-free-5.9.0-web/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">修改密码</h1>
+        <a href="search.html" class="mui-icon mui-icon-back mui-push-left mui-icon-left-nav"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>原密码</label>
+                <input type="password" class="mui-input-password" placeholder="请输入原密码" name="originPass">
+            </div>
+
+            <div class="mui-input-row">
+                <label>新密码</label>
+                <input type="password" class="mui-input-password" placeholder="请输入新密码" name="newPass">
+            </div>
+
+            <div class="mui-input-row">
+                <label>确认新密码</label>
+                <input type="password" class="mui-input-password" placeholder="请输入密码" name="confirmNewPass">
+            </div>
+
+            <div class="mui-input-row">
+                <label>认证码</label>
+                <input type="text" class="mui-input-clear" placeholder="认证码" name="vCode">
+                <a href="#" class="getCode" id="getCode">获取认证码</a>
+            </div>
+            <div class="mui-button-row">
+                <button type="button" class="mui-btn mui-btn-primary btn" id="modify-btn">确认修改密码</button>
+
+            </div>
+        </form>
+
+    </div>
+
+    <script src="asstes/mui/js/mui.min.js"></script>
+    <script src="asstes/zepto/zepto.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/modlify.js"></script>
+</body>
+
+</html>

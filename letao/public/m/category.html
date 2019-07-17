@@ -3,39 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/fontAwesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="asstes/fontawesome-free-5.9.0-web/css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/category.css">
-    <script src="assets/mui/js/mui.min.js"></script>
-    <script src="assets/zepto/zepto.min.js"></script>
-    <script src="assets/artTemplate/template-native.js"></script>
-    <script src="js/category.js"></script>
-    <script src="js/index.js"></script>
-
 </head>
 
 <body>
-    <!-- 表头 -->
-    <header class="mui-bar mui-bar-nav my-header">
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <h1 class="mui-title">网页标题</h1>
-        <!-- mui-pull-right mui添加右浮动 -->
-        <a href="#" class="mui-icon mui-icon-search mui-pull-right"></a>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">乐淘云购</h1>
+        <a href="search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
     </header>
     <nav class="mui-bar mui-bar-tab footer my-footer">
-        <a class="mui-tab-item mui-active" href="index.html">
+        <a class="mui-tab-item" href="index.html">
             <span class="mui-icon mui-icon-home"></span>
             <span class="mui-tab-label">首页</span>
         </a>
-        <a class="mui-tab-item" href="category.html">
+        <a class="mui-tab-item mui-active" href="category.html">
             <span class="mui-icon mui-icon-bars"></span>
             <span class="mui-tab-label">分类</span>
         </a>
         <a class="mui-tab-item" href="cart.html">
-            <span class="mui-icon iconfont icon-gouwuche fa fa-cart-plus"></span>
+            <span class="mui-icon fa fa-shopping-cart"></span>
+
             <span class="mui-tab-label">购物车</span>
         </a>
         <a class="mui-tab-item" href="user.html">
@@ -47,45 +41,55 @@
         <div class="category-left">
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                    <div class="links" id="links">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="link" id="link">
+
+
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="category-right">
+
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                    <ul class="brand-list mui-clearfix">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul class="category-ul" id="category-ul">
+
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    <script src="asstes/mui/js/mui.min.js"></script>
 
+    <script src="asstes/zepto/zepto.min.js"></script>
+    <script src="asstes/artTemplate/template-native.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/category.js"></script>
     <script type="text/template" id="category-first">
-        <% for (var i=0;i<result.length;i++) { %>
-            <a href="#" class="active" data-id="<% = result[i].id %>">
-                <% = result[i].categoryName %>
+        <% for(var i=0; i < result.length; i++){ %>
+            <a href="#" data-id="<%=result[i].id %>">
+                <%=result[i].categoryName %>
             </a>
             <% } %>
     </script>
 
-    <!-- 二级分类 -->
     <script type="text/template" id="category-second">
-        <% for( var i=0; i<rows.length; i++){%>
+        <% for(var i=0; i < rows.length; i++){ %>
             <li>
-                <a href="">
-                    <img src="<%=rows[i].barndLogo %>" alt="">
+                <a href="#">
+                    <img src="<%=rows[i].brandLogo %>" alt="">
                     <p>
-                        <%= rows[i].brandName %>
+                        <%=rows[i].brandName  %>
                     </p>
                 </a>
             </li>
             <% } %>
 
-                <% if (!rows.length){%>
-                    <div class="noresult"> 暂无数据 </div>
+                <% if(!rows.length){ %>
+                    <div class="null">数据空啦啦啦</div>
                     <% } %>
     </script>
 </body>

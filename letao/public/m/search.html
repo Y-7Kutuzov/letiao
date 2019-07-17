@@ -3,26 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/fontAwesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="asstes/fontawesome-free-5.9.0-web/css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/search.css">
-    <script src="assets/mui/js/mui.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/search.js"></script>
-    <script src="assets/zepto/zepto.min.js"></script>
-    <script src="assets/artTemplate/template-native.js"></script>
 </head>
 
 <body>
-
-    <header class="mui-bar mui-bar-nav my-header">
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <h1 class="mui-title">网页标题</h1>
-        <!-- mui-pull-right mui添加右浮动 -->
-        <a href="#" class="mui-icon mui-icon-search mui-pull-right"></a>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">搜索中心</h1>
+        <a href="search.html" class="mui-icon"></a>
     </header>
     <nav class="mui-bar mui-bar-tab footer my-footer">
         <a class="mui-tab-item mui-active" href="index.html">
@@ -34,7 +28,8 @@
             <span class="mui-tab-label">分类</span>
         </a>
         <a class="mui-tab-item" href="cart.html">
-            <span class="mui-icon iconfont icon-gouwuche fa fa-cart-plus"></span>
+            <span class="mui-icon fa fa-shopping-cart"></span>
+
             <span class="mui-tab-label">购物车</span>
         </a>
         <a class="mui-tab-item" href="user.html">
@@ -42,31 +37,40 @@
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
-
     <div class="mui-content">
-        <div class="container">
+        <div class="content">
+            <!-- 搜索框 -->
             <div class="search">
-                <input type="text" placeholder="搜索你喜欢的商品">
+                <input type="text" placeholder="搜索您喜欢的商品" value="">
                 <input type="button" value="搜索" id="search-btn">
             </div>
-            <div class="history-top mui-clearfix">
+            <!-- /搜索框 -->
+
+            <!-- 历史纪录 -->
+            <div class="history mui-clearfix">
                 <span class="title mui-pull-left">搜索历史</span>
-                <span class="clear mui-pull-right mui-icon mui-icon-trash" id="clearBtn">清空历史</span>
+                <span class="clear mui-pull-right mui-icon mui-icon-trash" id="claerBtn">清空历史</span>
             </div>
+            <!-- /历史纪录 -->
+            <ul class="mui-table-view" id="mui-table-view">
+
+
+            </ul>
         </div>
-        <ul class="mui-table-view" id="history-box">
-
-
-        </ul>
     </div>
-    <script type="text/template" id="historyTpl">
-        <% for ( var i=0; i<result.length;i++){ %>
-            <li class="mui-table-view-cell">
-                <%= result[i] %>
-            </li>
-            <% } %>
-    </script>
-</body>
 
+    <script src="asstes/mui/js/mui.min.js"></script>
+    <script src="asstes/zepto/zepto.min.js"></script>
+    <script src="asstes/artTemplate/template-native.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/public.js"></script>
+</body>
+<script type="text/template" id="historyTpl">
+    <% for(var i=0; i < result.length; i++){ %>
+        <li class="mui-table-view-cell">
+            <%=result[i] %>
+        </li>
+        <% } %> .
+</script>
 
 </html>

@@ -1,0 +1,111 @@
+.mui-slider img {
+    vertical-align: top;
+}
+
+.titler {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.price {
+    padding: 10px;
+    border-top: 1px solid #d3d0d0;
+    border-bottom: 1px solid #d3d0d0;
+    font-size: 14px;
+}
+
+.price .now {
+    font-size: 24px;
+    color: rgb(167, 23, 23);
+}
+
+.price .old {
+    color: #666666;
+    text-decoration: line-through;
+    padding-left: 10px;
+}
+
+.size {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.size span {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
+}
+
+.num {
+    padding: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 28px;
+    border-top: 1px solid #cccccc;
+}
+
+.num .selectNum {
+    margin-right: 10px;
+}
+
+.num .selectNum span {
+    float: left;
+    height: 28px;
+    width: 28px;
+    line-height: 28px;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+.num .selectNum input {
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+.btns {
+    margin: 10px;
+    overflow: hidden;
+}
+
+.btns a {
+    float: left;
+    width: 50%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+}
+
+.btns span {
+    float: left;
+    width: 50%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+}
+
+.btns a {
+    background-color: rgb(196, 42, 42);
+}
+
+.btns span {
+    background-color: rgb(228, 169, 61);
+}
+
+.size .active {
+    color: #fff;
+    background-color: orange;
+    border: orange;
+}

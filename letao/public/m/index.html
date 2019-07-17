@@ -3,22 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <link rel="stylesheet" href="asstes/mui/css/mui.min.css">
+    <link rel="stylesheet" href="asstes/fontAwesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="asstes/fontawesome-free-5.9.0-web/css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.min.css">
-    <script src="assets/mui/js/mui.min.js"></script>
-    <script src="js/index.js"></script>
 </head>
 
 <body>
-    <!-- 表头 -->
-    <header class="mui-bar mui-bar-nav my-header">
-        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-        <h1 class="mui-title">网页标题</h1>
-        <!-- mui-pull-right mui添加右浮动 -->
-        <a href="#" class="mui-icon mui-icon-search mui-pull-right"></a>
+    <!-- <h1>hello word!!</h1> -->
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">乐淘云购</h1>
+        <a href="search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
     </header>
     <nav class="mui-bar mui-bar-tab footer my-footer">
         <a class="mui-tab-item mui-active" href="index.html">
@@ -30,7 +28,8 @@
             <span class="mui-tab-label">分类</span>
         </a>
         <a class="mui-tab-item" href="cart.html">
-            <span class="mui-icon iconfont icon-gouwuche fa fa-cart-plus"></span>
+            <span class="mui-icon fa fa-shopping-cart"></span>
+
             <span class="mui-tab-label">购物车</span>
         </a>
         <a class="mui-tab-item" href="user.html">
@@ -38,70 +37,44 @@
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
-    <!-- 轮播图 -->
     <div class="mui-content">
-        <div id="slider" class="mui-slider">
-            <div class="mui-slider-group mui-slider-loop" style="transform: translate3d(-1080px, 0px, 0px) translateZ(0px); transition-duration: 0ms; transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);">
-                <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+        <div class="mui-slider">
+            <div class="mui-slider-group  mui-slider-loop">
                 <div class="mui-slider-item mui-slider-item-duplicate">
-                    <a href="#">
-                        <img src="images/banner6.png">
-                    </a>
+                    <a href="#"><img src="images/banner6.png" /></a>
                 </div>
-                <!-- 第一张 -->
                 <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner1.png">
-                    </a>
+                    <a href="#"><img src="images/banner1.png" /></a>
                 </div>
-                <!-- 第二张 -->
                 <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner2.png">
-                    </a>
+                    <a href="#"><img src="images/banner2.png" /></a>
                 </div>
-                <!-- 第三张 -->
-                <div class="mui-slider-item mui-active">
-                    <a href="#">
-                        <img src="images/banner3.png">
-                    </a>
-                </div>
-                <!-- 第四张 -->
                 <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner4.png">
-                    </a>
+                    <a href="#"><img src="images/banner3.png" /></a>
                 </div>
-
-                <!-- 第五张 -->
                 <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner5.png">
-                    </a>
+                    <a href="#"><img src="images/banner4.png" /></a>
                 </div>
-                <!-- 第六张 -->
                 <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner6.png">
-                    </a>
+                    <a href="#"><img src="images/banner5.png" /></a>
                 </div>
-                <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+                <div class="mui-slider-item">
+                    <a href="#"><img src="images/banner6.png" /></a>
+                </div>
                 <div class="mui-slider-item mui-slider-item-duplicate">
-                    <a href="#">
-                        <img src="images/banner1.png">
-                    </a>
+                    <a href="#"><img src="images/banner1.png" /></a>
                 </div>
             </div>
             <div class="mui-slider-indicator">
-                <div class="mui-indicator"></div>
-                <div class="mui-indicator"></div>
-                <div class="mui-indicator"></div>
-                <div class="mui-indicator"></div>
                 <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
+                <div class="mui-indicator"></div>
                 <div class="mui-indicator"></div>
             </div>
         </div>
-
+        <!-- 轮播图结束 -->
         <!-- 导航链接 -->
         <div class="nav-links mui-clearfix">
             <a href="#">
@@ -122,220 +95,158 @@
             <a href="#">
                 <img src="images/nav6.png" alt="">
             </a>
+
         </div>
+        <!-- /导航链接 -->
+
         <!-- 品牌专区 -->
         <div class="brand">
-            <img src="images/title0.png" alt="title">
-            <ul class="list mui-clearfix">
+            <img src="images/title0.png" alt="img" class="title">
+            <ul>
                 <li>
-                    <a href=""><img src="images/brand1.png" alt=""></a>
+                    <a href="#"><img src="images/brand1.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand2.png" alt=""></a>
+                    <a href="#"><img src="images/brand2.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand3.png" alt=""></a>
+                    <a href="#"><img src="images/brand3.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand4.png" alt=""></a>
+                    <a href="#"><img src="images/brand4.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand5.png" alt=""></a>
+                    <a href="#"><img src="images/brand5.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand6.png" alt=""></a>
+                    <a href="#"><img src="images/brand6.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand7.png" alt=""></a>
+                    <a href="#"><img src="images/brand7.png" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img src="images/brand8.png" alt=""></a>
+                    <a href="#"><img src="images/brand8.png" alt=""></a>
                 </li>
-
             </ul>
-
         </div>
-
-        <!-- 运动生活专区 -->
-
+        <!-- / 品牌专区-->
+        <!-- 运动生活 -->
         <div class="product">
-            <img src="images/title1.png" alt="">
-            <ul class="mui-clearfix">
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-							adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-						</span>
+            <img src="images/title2.png" alt="" class="titleone">
+
+            <ul>
+                <a href="#">
+                    <li>
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
                         <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
                         </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                            </span>
-                        <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
-                        </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
+                        <button>立即购买</button>
+                </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                    adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                </span>
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
                         <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
                         </p>
-                        <span class="buy-now">立即购买</span>
+                        <button>立即购买</button>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                        adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                    </span>
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
                         <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
                         </p>
-                        <span class="buy-now">立即购买</span>
+                        <button>立即购买</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
+                        <p>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
+                        </p>
+                        <button>立即购买</button>
                     </a>
                 </li>
             </ul>
-        </div>
 
-        <!-- 女士专栏 -->
+        </div>
+        <!-- /运动生活 -->
+        <!-- 运动生活2 -->
         <div class="product">
-            <img src="images/title2.png" alt="">
-            <ul class="mui-clearfix">
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                            </span>
+            <img src="images/title3.png" alt="" class="titleone">
+            <ul>
+                <a href="#">
+                    <li>
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
                         <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
                         </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                    adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                </span>
-                        <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
-                        </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
+                        <button>立即购买</button>
+                </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                        adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                    </span>
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
                         <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
                         </p>
-                        <span class="buy-now">立即购买</span>
+                        <button>立即购买</button>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                            adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                        </span>
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
                         <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
                         </p>
-                        <span class="buy-now">立即购买</span>
+                        <button>立即购买</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/product.jpg" alt="">
+                        <span class="span">adidas阿迪达斯 男式 场下休闲篮球鞋S83700</span>
+                        <p>
+                            <span>￥560.00</span>
+                            <span>￥888.00</span>
+                        </p>
+                        <button>立即购买</button>
                     </a>
                 </li>
             </ul>
-        </div>
-        <!-- 男士专栏 -->
-        <div class="product">
-            <img src="images/title3.png" alt="">
-            <ul class="mui-clearfix">
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                            </span>
-                        <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
-                        </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                    adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                </span>
-                        <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
-                        </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
-                </li>
 
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                        adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                    </span>
-                        <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
-                        </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/product.jpg">
-                        <span class="name">
-                                            adidas阿迪达斯 男式 场下休闲篮球鞋S83700
-                                        </span>
-                        <p>
-                            <span>¥560</span>
-                            <span>¥888</span>
-                        </p>
-                        <span class="buy-now">立即购买</span>
-                    </a>
-                </li>
-            </ul>
         </div>
+        <!-- /运动生活2 -->
     </div>
+    <script src="asstes/mui/js/mui.min.js"></script>
+    <script src="asstes/zepto/zepto.min.js"></script>
+    <script src="js/public.js"></script>
+    <script>
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval: 1000 //自动轮播周期，若为0则不自动播放，默认为0；
+        });
+    </script>
 </body>
 
 </html>

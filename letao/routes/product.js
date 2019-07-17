@@ -162,7 +162,6 @@ var addPic = function (picName, picAddr, id) {
     })
 }
 router.post("/addProduct", function (req, res) {
-
     var product = new Product({
         proName: req.body.proName ? req.body.proName : '',
         oldPrice: req.body.oldPrice ? parseFloat(req.body.oldPrice) : '',
@@ -177,14 +176,14 @@ router.post("/addProduct", function (req, res) {
     Product.addProduct(product, function (err, data) {
         if (err) return res.send({"error": 403, "message": "数据库异常！"});
 
-        if (req.body.picName1 && req.body.picAddr1) {
-            addPic(req.body.picName1, req.body.picAddr1, data.insertId);
+        if (req.body['pic[0][picName]'] && req.body['pic[0][picAddr]']) {
+            addPic(req.body['pic[0][picName]'], req.body['pic[0][picAddr]'], data.insertId);
         }
-        if (req.body.picName2 && req.body.picAddr2) {
-            addPic(req.body.picName2, req.body.picAddr2, data.insertId);
+        if (req.body['pic[1][picName]'] && req.body['pic[1][picAddr]']) {
+            addPic(req.body['pic[1][picName]'], req.body['pic[1][picAddr]'], data.insertId);
         }
-        if (req.body.picName3 && req.body.picAddr3) {
-            addPic(req.body.picName3, req.body.picAddr3, data.insertId);
+        if (req.body['pic[2][picName]'] && req.body['pic[2][picAddr]']) {
+            addPic(req.body['pic[2][picName]'], req.body['pic[2][picAddr]'], data.insertId);
         }
         res.send({"success": true});
     })

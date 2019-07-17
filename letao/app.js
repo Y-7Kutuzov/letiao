@@ -24,7 +24,7 @@ var app = express();
 // }));
 
 app.use('/api', proxyServer({
-    target: 'http://192.168.27.39:3000',
+    target: 'http://localhost:3000',
     changeOrigin: true,
     pathRewrite: {
         '^/api/': '/'
